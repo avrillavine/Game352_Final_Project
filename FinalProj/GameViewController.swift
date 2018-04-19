@@ -8,17 +8,36 @@
 import UIKit
 import SpriteKit
 class GameViewController: UIViewController {
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        let scene = StartScene(size: (view?.bounds.size)!)
+//        //let scene = GameScene(size: CGSize(width: 2048, height: 1536))
+//        let skView = self.view as! SKView
+//        skView.showsFPS = true
+//        skView.showsNodeCount = true
+//        skView.ignoresSiblingOrder = true
+//        scene.scaleMode = .aspectFill
+//        skView.presentScene(scene)
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene = GameScene(size: CGSize(width: 2048, height: 1536))
+
+        let scene = StartScene(size: (view?.bounds.size)!)
+
+        // Configure the view.
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
+
+        /* Sprite Kit applies additional optimizations to improve rendering performance */
         skView.ignoresSiblingOrder = true
-        scene.scaleMode = .aspectFill
+
+        /* Set the scale mode to scale to fit the window */
+        scene.scaleMode = .resizeFill
+
         skView.presentScene(scene)
+
     }
-    
     override var prefersStatusBarHidden: Bool {
         return true
     }

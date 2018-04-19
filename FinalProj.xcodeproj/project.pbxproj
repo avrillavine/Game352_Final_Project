@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E140B44208934A8009F1414 /* triangle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E140B43208934A8009F1414 /* triangle2.png */; };
+		0E140B4620893ACB009F1414 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140B4520893ACB009F1414 /* StartScene.swift */; };
+		0E140B6C2089498F009F1414 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E140B6B2089498F009F1414 /* Dot.swift */; };
 		0E3B202F2076C2E100F29D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B202E2076C2E100F29D71 /* AppDelegate.swift */; };
 		0E3B20352076C2E100F29D71 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B20342076C2E100F29D71 /* GameScene.swift */; };
 		0E3B20372076C2E100F29D71 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B20362076C2E100F29D71 /* GameViewController.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E140B43208934A8009F1414 /* triangle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle2.png; sourceTree = "<group>"; };
+		0E140B4520893ACB009F1414 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		0E140B6B2089498F009F1414 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		0E3B202B2076C2E100F29D71 /* FinalProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E3B202E2076C2E100F29D71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E3B20342076C2E100F29D71 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -132,12 +138,15 @@
 				0E690F4B207FE85600855852 /* squareF.png */,
 				0E690F49207FE85500855852 /* star.png */,
 				0E690F4E207FE85600855852 /* starF.png */,
+				0E140B43208934A8009F1414 /* triangle2.png */,
 				0E690F4A207FE85600855852 /* triangle.png */,
 				0E690F4C207FE85600855852 /* triangleF.png */,
 				0E3B203D2076C2E100F29D71 /* LaunchScreen.storyboard */,
 				0E3B20402076C2E100F29D71 /* Info.plist */,
 				0E690F6E207FF1BE00855852 /* GoogleService-Info.plist */,
 				0E690F5A207FEAA200855852 /* BasicGameObject.swift */,
+				0E140B4520893ACB009F1414 /* StartScene.swift */,
+				0E140B6B2089498F009F1414 /* Dot.swift */,
 			);
 			path = FinalProj;
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E140B44208934A8009F1414 /* triangle2.png in Resources */,
 				0E3B203A2076C2E100F29D71 /* Main.storyboard in Resources */,
 				0E3B203C2076C2E100F29D71 /* Assets.xcassets in Resources */,
 				0E690F50207FE85600855852 /* circle.png in Resources */,
@@ -243,7 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E690F79207FF6B700855852 /* Database.swift in Sources */,
+				0E140B4620893ACB009F1414 /* StartScene.swift in Sources */,
 				0E3B20352076C2E100F29D71 /* GameScene.swift in Sources */,
+				0E140B6C2089498F009F1414 /* Dot.swift in Sources */,
 				0E3B20372076C2E100F29D71 /* GameViewController.swift in Sources */,
 				0E3B202F2076C2E100F29D71 /* AppDelegate.swift in Sources */,
 				0E690F59207FEA5F00855852 /* Triangle.swift in Sources */,
