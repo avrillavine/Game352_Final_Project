@@ -20,19 +20,14 @@ class GameScene: SKScene {
     
     //    let randValX: CGFloat = CGFloat((arc4random()%1500)+1)
     //    let randValY: CGFloat = CGFloat((arc4random()%2000)+1)
+
+
     var randValX = CGFloat((arc4random()%1500)+1)
     var randValY = CGFloat((arc4random()%2000)+1)
-    //    var randValX : Int {
-    //        get{
-    //            return (arc4random()%1500)+1
-    //        }
-    //    }
-    //    let randX = CGFloat(randValX)
-    //    let randY = CGFloat(randValY)
     
     let triangle = Triangle(position: CGPoint(x: 400, y: 400),size: CGSize(width: 10, height: 10))
-    //    let dot = Dot(position: CGPoint(x: randValX, y: randValY), size: CGSize(width: 4, height: 4))
-    
+    //let dot = Dot(position: CGPoint(x: randValX, y: randValY), size: CGSize(width: 4, height: 4))
+    let dot = Dot(position: CGPoint(x: 0, y: 0))
     let tSpeed:CGFloat = 10.0
     
     let score_label = SKLabelNode(fontNamed: "STHeitiTC-Medium")
@@ -44,12 +39,24 @@ class GameScene: SKScene {
     //    //Gives screen size in pixels rather than points
     let screenWidthInPixels = UIScreen.main.nativeBounds.width
     let screenHeightInPixels = UIScreen.main.nativeBounds.height
+
+    var xr = 0
+    var yr = 0
+    
     // Create and configure the scene.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
     override func didMove(to view: SKView) {
         
+//            xr = CGFloat(max(CGFloat(dot.frame.size.width) , CGFloat(xr))) // left edge detect
+//            xr = MIN(image.superview.frame.size.width - image.frame.size.width , xr); //right edge detect
+//
+//            yr = MAX(image.frame.size.height , yr); //  top edge detect
+//            yr = MIN(image.superview.frame.size.height - image.frame.size.height , yr); //bottom edge detect
+//        dot.position = CGPoint(x: randValX, y: randValY)
+        dot.position = CGPoint(x: randValX, y: randValY)
+        addChild(dot)
         score_label.fontSize = 80
         score_label.fontColor = SKColor.white
         score_label.horizontalAlignmentMode = .center

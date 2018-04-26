@@ -13,6 +13,7 @@
 		0E04199E2092546300CF95D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E04199C2092546300CF95D9 /* Main.storyboard */; };
 		0E0419A02092546300CF95D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E04199F2092546300CF95D9 /* Assets.xcassets */; };
 		0E0419A32092546300CF95D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0419A12092546300CF95D9 /* LaunchScreen.storyboard */; };
+		0E2A331B20926AA50019E943 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A331A20926AA50019E943 /* Dot.swift */; };
 		0EDA28EE20925FFD00D9EEA4 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA28E520925FFD00D9EEA4 /* square.png */; };
 		0EDA28EF20925FFD00D9EEA4 /* circleF.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA28E620925FFD00D9EEA4 /* circleF.png */; };
 		0EDA28F020925FFD00D9EEA4 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA28E720925FFD00D9EEA4 /* circle.png */; };
@@ -38,6 +39,7 @@
 		0E04199F2092546300CF95D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E0419A22092546300CF95D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E0419A42092546300CF95D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E2A331A20926AA50019E943 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		0EDA28E520925FFD00D9EEA4 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		0EDA28E620925FFD00D9EEA4 /* circleF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleF.png; sourceTree = "<group>"; };
 		0EDA28E720925FFD00D9EEA4 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				0E04199F2092546300CF95D9 /* Assets.xcassets */,
 				0E0419A12092546300CF95D9 /* LaunchScreen.storyboard */,
 				0E0419A42092546300CF95D9 /* Info.plist */,
+				0E2A331A20926AA50019E943 /* Dot.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				0EDA28FB2092603000D9EEA4 /* HelpScene.swift in Sources */,
 				0E04199B2092546300CF95D9 /* GameViewController.swift in Sources */,
 				0EDA28FC2092603000D9EEA4 /* StartScene.swift in Sources */,
+				0E2A331B20926AA50019E943 /* Dot.swift in Sources */,
 				0EDA28FD2092603000D9EEA4 /* ButtonSprite.swift in Sources */,
 				0E0419932092546300CF95D9 /* AppDelegate.swift in Sources */,
 				0EDA29002092605B00D9EEA4 /* Triangle.swift in Sources */,
