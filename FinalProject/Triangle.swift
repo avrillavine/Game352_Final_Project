@@ -18,8 +18,17 @@ class Triangle: BasicGameObject {
         self.position = position
         self.zPosition = 1
         self.name = "triangle"
+        self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
+        self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
+        self.physicsBody?.contactTestBitMask = CollisionTypes.dot.rawValue
+        self.physicsBody?.collisionBitMask = 0
+       // self.physicsBody?.usesPreciseCollisionDetection = true
+        
     }
-    
+    func destroy(){
+        self.removeFromParent()
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

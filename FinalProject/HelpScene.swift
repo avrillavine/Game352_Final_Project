@@ -18,6 +18,7 @@ class HelpScene: SKScene {
     let rules = SKLabelNode(fontNamed: "STHeitiTC-Medium")
     
     override func didMove(to view: SKView) {
+        
         // set the background color
         backgroundColor = SKColor.white
         rules.fontSize = 40
