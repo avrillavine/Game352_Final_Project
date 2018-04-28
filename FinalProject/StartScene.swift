@@ -22,7 +22,7 @@ class StartScene: SKScene {
     let screenWidthInPixels = UIScreen.main.nativeBounds.width
     let screenHeightInPixels = UIScreen.main.nativeBounds.height
     
-    
+
     override func didMove(to view: SKView) {
         // set the background color
         backgroundColor = SKColor.white
@@ -30,6 +30,24 @@ class StartScene: SKScene {
         let play_button = ButtonSprite(texture: nil, color: .white, size: CGSize.init(width: 180, height: 80), text: "Play", buttonPressed: playButton)
         play_button.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         self.addChild(play_button)
+        
+//      UIButton implemented to demonstrate UIbutton capabilities for menu navigation purposes
+//        let play_button:UIButton = UIButton(frame: CGRect(x: 100, y: 400, width: 100, height: 50))
+//      COULD NOT ADD UIBUTTON IN FINAL PRODUCT DUE TO DIFFICULTIES IN MANAGING IT'S FUNCTIONS
+        //for example it would stay on the screen after a transiton
+//        let play_button:UIButton = UIButton(frame: CGRect(x: 200, y: 230, width: 180, height: 80))
+//        play_button.center = CGPoint(x: self.frame.midX, y: self.frame.midY)
+//        play_button.backgroundColor = .gray
+//        play_button.setTitle("Play", for: .normal)
+//        play_button.setTitleColor(.black, for: .normal)
+//      The idea behind the below code was to make the button look more like the help one but the layer stayed with
+//      the next scene. So I had to take it out.
+//        play_button.layer.cornerRadius = 5
+//        play_button.layer.borderWidth = 1
+//        play_button.layer.borderColor = UIColor.black.cgColor
+//        play_button.addTarget(self, action: #selector(playButton), for: .touchUpInside)
+//        
+//        self.view!.addSubview(play_button)
         
         let help_button = ButtonSprite(texture: nil, color: .white, size: CGSize.init(width: 180, height: 80), text: "Help", buttonPressed: helpButton)
         help_button.position = CGPoint(x: self.frame.midX, y: self.frame.midY-180)
@@ -42,64 +60,22 @@ class StartScene: SKScene {
         // transition from current scene to the new scene
         view!.presentScene(gameScene, transition: reveal)
     }
+    
+//    @objc func playButton(sender: UIButton!) {
+//
+//        let gameScene = GameScene(size: CGSize(width: screenWidthInPixels, height: screenHeightInPixels))
+//        let reveal = SKTransition.crossFade(withDuration: 2)
+//        // transition from current scene to the new scene
+//        view!.presentScene(gameScene, transition: reveal)
+//    }
     func helpButton() {
         let helpScene = HelpScene(size: CGSize(width: screenWidthInPixels, height: screenHeightInPixels))
         let reveal = SKTransition.crossFade(withDuration: 2)
         // transition from current scene to the new scene
         view!.presentScene(helpScene, transition: reveal)
     }
-    //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    //
-    //    }
+
     
 }
 
-//import Foundation
-//import SpriteKit
-//class StartScene: SKScene {
-//
-//    let play_button = SKLabelNode(fontNamed: "STHeitiTC-Medium")
-//    let screenWidthInPixels = UIScreen.main.nativeBounds.width
-//    let screenHeightInPixels = UIScreen.main.nativeBounds.height
-//    override func didMove(to view: SKView) {
-//        // set the background
-//        //_ = SKColor.white
-//        backgroundColor = SKColor.white
-//        // set size, color, position and text of the tapStartLabel
-//        play_button.fontSize = 16
-//        play_button.fontColor = SKColor.black
-//        play_button.horizontalAlignmentMode = .center
-//        play_button.verticalAlignmentMode = .center
-//        play_button.position = CGPoint(
-//            x: size.width / 2,
-//            y: size.height / 2
-//        )
-//        play_button.text = "Tap to Play"
-//        let shape = SKShapeNode()
-//        shape.path = UIBezierPath(roundedRect: CGRect(x: -70, y: -25, width: 142, height: 55), cornerRadius: 64).cgPath
-//        shape.position = CGPoint(x: play_button.position.x, y: play_button.position.y)
-//        shape.fillColor = UIColor.clear
-//        shape.strokeColor = UIColor.darkGray
-//        shape.lineWidth = 4
-//        addChild(shape)
-//        //SKShapeNode.init(ellipseIn: CGRect.init(origin: play_button.position, size: CGSize(width: 6, height: 6)))
-//
-//        // add the label to the scene
-//        addChild(play_button)
-//    }
-//
-//
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//
-//        let gameScene = GameScene(size: CGSize(width: screenWidthInPixels, height: screenHeightInPixels))
-//        //        gameScene.scaleMode = scaleMode
-//        //        gameScene.scaleMode.rawVa
-//
-//        // use a transition to the gameScene
-//        //let reveal = SKTransition.doorsOpenVertical(withDuration: 1)
-//        let reveal = SKTransition.crossFade(withDuration: 2)
-//        // transition from current scene to the new scene
-//        view!.presentScene(gameScene, transition: reveal)
-//    }
-//}
 

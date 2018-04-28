@@ -20,9 +20,9 @@ class Triangle: BasicGameObject {
         self.name = "triangle"
         self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
         self.physicsBody?.affectedByGravity = false
-        self.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
-        self.physicsBody?.contactTestBitMask = CollisionTypes.dot.rawValue
-        self.physicsBody?.collisionBitMask = 0
+//        self.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
+//        self.physicsBody?.contactTestBitMask = CollisionTypes.dot.rawValue
+//        self.physicsBody?.collisionBitMask = 0
        // self.physicsBody?.usesPreciseCollisionDetection = true
         
     }

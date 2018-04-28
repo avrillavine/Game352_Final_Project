@@ -28,6 +28,11 @@
 		0EDA28FD2092603000D9EEA4 /* ButtonSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA28F92092603000D9EEA4 /* ButtonSprite.swift */; };
 		0EDA28FE2092603000D9EEA4 /* BasicGameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA28FA2092603000D9EEA4 /* BasicGameObject.swift */; };
 		0EDA29002092605B00D9EEA4 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA28FF2092605A00D9EEA4 /* Triangle.swift */; };
+		244487A72093E9E100A928B4 /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 244487A52093E9E100A928B4 /* bokeh.png */; };
+		244487AA2093EB6100A928B4 /* fragments.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 244487A92093EB6100A928B4 /* fragments.scnp */; };
+		244487AC2094020E00A928B4 /* PowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 244487AB2094020E00A928B4 /* PowerUp.atlas */; };
+		244487DC2094172D00A928B4 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244487DB2094172D00A928B4 /* Enemy.swift */; };
+		244487DE2094175000A928B4 /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244487DD2094175000A928B4 /* PowerUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		0EDA28F92092603000D9EEA4 /* ButtonSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSprite.swift; sourceTree = "<group>"; };
 		0EDA28FA2092603000D9EEA4 /* BasicGameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicGameObject.swift; sourceTree = "<group>"; };
 		0EDA28FF2092605A00D9EEA4 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		244487A52093E9E100A928B4 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
+		244487A92093EB6100A928B4 /* fragments.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = fragments.scnp; sourceTree = "<group>"; };
+		244487AB2094020E00A928B4 /* PowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PowerUp.atlas; sourceTree = "<group>"; };
+		244487DB2094172D00A928B4 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		244487DD2094175000A928B4 /* PowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 		0E0419912092546300CF95D9 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				244487AB2094020E00A928B4 /* PowerUp.atlas */,
 				0EDA28FF2092605A00D9EEA4 /* Triangle.swift */,
 				0EDA28FA2092603000D9EEA4 /* BasicGameObject.swift */,
 				0EDA28F92092603000D9EEA4 /* ButtonSprite.swift */,
@@ -108,6 +119,10 @@
 				0E0419A12092546300CF95D9 /* LaunchScreen.storyboard */,
 				0E0419A42092546300CF95D9 /* Info.plist */,
 				0E2A331A20926AA50019E943 /* Dot.swift */,
+				244487A52093E9E100A928B4 /* bokeh.png */,
+				244487A92093EB6100A928B4 /* fragments.scnp */,
+				244487DB2094172D00A928B4 /* Enemy.swift */,
+				244487DD2094175000A928B4 /* PowerUp.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -174,11 +189,14 @@
 				0E04199E2092546300CF95D9 /* Main.storyboard in Resources */,
 				0EDA28F620925FFD00D9EEA4 /* triangle.png in Resources */,
 				0E0419A02092546300CF95D9 /* Assets.xcassets in Resources */,
+				244487AA2093EB6100A928B4 /* fragments.scnp in Resources */,
 				0EDA28EE20925FFD00D9EEA4 /* square.png in Resources */,
 				0EDA28F520925FFD00D9EEA4 /* triangleF.png in Resources */,
 				0EDA28F020925FFD00D9EEA4 /* circle.png in Resources */,
 				0EDA28F420925FFD00D9EEA4 /* triangle2.png in Resources */,
+				244487A72093E9E100A928B4 /* bokeh.png in Resources */,
 				0EDA28F220925FFD00D9EEA4 /* starF.png in Resources */,
+				244487AC2094020E00A928B4 /* PowerUp.atlas in Resources */,
 				0EDA28F320925FFD00D9EEA4 /* squareF.png in Resources */,
 				0EDA28F120925FFD00D9EEA4 /* star.png in Resources */,
 				0E0419A32092546300CF95D9 /* LaunchScreen.storyboard in Resources */,
@@ -195,10 +213,12 @@
 			files = (
 				0EDA28FE2092603000D9EEA4 /* BasicGameObject.swift in Sources */,
 				0E0419992092546300CF95D9 /* GameScene.swift in Sources */,
+				244487DE2094175000A928B4 /* PowerUp.swift in Sources */,
 				0EDA28FB2092603000D9EEA4 /* HelpScene.swift in Sources */,
 				0E04199B2092546300CF95D9 /* GameViewController.swift in Sources */,
 				0EDA28FC2092603000D9EEA4 /* StartScene.swift in Sources */,
 				0E2A331B20926AA50019E943 /* Dot.swift in Sources */,
+				244487DC2094172D00A928B4 /* Enemy.swift in Sources */,
 				0EDA28FD2092603000D9EEA4 /* ButtonSprite.swift in Sources */,
 				0E0419932092546300CF95D9 /* AppDelegate.swift in Sources */,
 				0EDA29002092605B00D9EEA4 /* Triangle.swift in Sources */,

@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
         
         //let scene = StartScene(size: (view?.bounds.size)!)
         let scene = StartScene(size: CGSize(width: screenWidthInPixels, height: screenHeightInPixels))
+    
+        
         // Configure the view.
         let skView = self.view as! SKView
         skView.showsFPS = true

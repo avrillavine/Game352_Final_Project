@@ -11,22 +11,13 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     let background = SKSpriteNode(imageNamed: "squareF")
-    
-    let pX: CGFloat = 400
-    let pY: CGFloat = 400
-    
-    let sW: CGFloat = 10
-    let sH: CGFloat = 10
-    
-    //    let randValX: CGFloat = CGFloat((arc4random()%1500)+1)
-    //    let randValY: CGFloat = CGFloat((arc4random()%2000)+1)
 
-    
    var lastUpdateTime: CFTimeInterval = 0 // Track the delta time
     
     let triangle = Triangle(position: CGPoint(x: 400, y: 400),size: CGSize(width: 10, height: 10))
     //let dot = Dot(position: CGPoint(x: randValX, y: randValY), size: CGSize(width: 4, height: 4))
     let dot = Dot(position: CGPoint(x: 0, y: 0))
+
     let tSpeed:CGFloat = 20.0
     
     let score_label = SKLabelNode(fontNamed: "STHeitiTC-Medium")
@@ -41,10 +32,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     let screenWidth  = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
-    
-//    var randValX = CGFloat((arc4random()%1500)+1)
-//    var randValY = CGFloat((arc4random()%2000)+1)
 
+//    func discintegrationEmitter() -> SCNParticleSystem {
+//        let fragments = SCNParticleSystem(named: "fragments.scnp", inDirectory: nil)!
+//        return fragments
+//    }
+    
+    let powerUp = PowerUp(position: CGPoint(x: 0, y: 0))
+    func collectCollide(player: SKNode, dot: SKNode){
+        if (dot.name == "dot"){
+            destroy(dot: dot)
+            score_counter += 1
+        }
+    }
+    
+    func destroy(dot: SKNode){
+        dot.removeFromParent()
+    }
+    
 
     // Create and configure the scene.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -103,47 +108,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         addChild(triangle)
     
-//        print(cDistance)
-        //var distance: CGPoint = CGPoint(x: triangle.position.x-dot.position.x, y: triangle.position.y-dot.position.y)
-        //var distanceY = triangle.position
-//        print("distance x: ",distance.x)
-//        print("distance y: ",distance.y)
-        //distance between collectable and player's triangle
+        //Sets up the interaction between the triangle and the dot collectable
+        
+        triangle.physicsBody!.contactTestBitMask = dot.physicsBody!.collisionBitMask
+        
+        powerUp.position = CGPoint(x: xPosition, y: yPosition)
+        addChild(powerUp)
+//        let path = Bundle.main.path(forResource: "fragments", ofType: "sks")
+//        let fragEmitter = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
+//        fragEmitter.position = dot.position
+//        fragEmitter.targetNode = self.scene
+//        self.addChild(fragEmitter)
+        //Could not animate powerUp due to technical difficulties relating to the program trying to grab an empty
+        //Array, also seeding for randomizing position needs to be worked out as well so it doesn't spawn in same place
+        //as dot
+        //powerUp.animatePowerUp()
 
-//        if(triangle.intersects(dot)){
-//            dot.destroy()
-//            print("Hit")
-//        }
-        
+    }
+    //keeps track of collisions between specific physics bodies
+    func didBegin(_ contact: SKPhysicsContact) {
+        if(contact.bodyA.node?.name == "triangle"){
+            collectCollide(player: contact.bodyA.node!, dot: contact.bodyB.node!)
+        } else if(contact.bodyB.node?.name == "dot") {
+            collectCollide(player: contact.bodyB.node!, dot: contact.bodyA.node!)
 
-        
+        }
     }
-    func didBeginContact(contact: SKPhysicsContact) {
-//        if (contact.bodyA.node == triangle || contact.bodyB.node == dot) {
-//            triangle.isHidden = true
-//        }
-//        var firstBody: SKPhysicsBody
-//        var secondBody: SKPhysicsBody
-//        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
-//            firstBody = contact.bodyA
-//            secondBody = contact.bodyB
-//        } else {
-//            firstBody = contact.bodyB
-//            secondBody = contact.bodyA
-//        }
-//
-//        if ((firstBody.categoryBitMask & CollisionTypes.dot.rawValue != 0) &&
-//            (secondBody.categoryBitMask & CollisionTypes.player.rawValue != 0)) {
-//            NSLog("Invader and Player Collision Contact")
-//
-//        }
-//        if ((firstBody.categoryBitMask == CollisionTypes.dot.rawValue) && (secondBody.categoryBitMask == CollisionTypes.player.rawValue)){
-//            print("Invader and Player Collision Contact")
-//            score_counter += 1
-//
-//        }
-        
-    }
+
     // code basis borrowed from https://stackoverflow.com/questions/36230619/how-to-move-enemy-towards-a-moving-player
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
@@ -167,16 +158,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(_ currentTime: TimeInterval) {
         let deltaTime = max(1.0/30, currentTime - lastUpdateTime)
         lastUpdateTime = currentTime
-        var cDistance:CGFloat = distance(triangle.position, dot.position)
-        
-        print(cDistance)
-    
-        if(cDistance<=60){
-            print("Hit")
-            dot.destroy()
-            score_counter += 1
-            //delete(dot)
-        }
+
     }
 }
 

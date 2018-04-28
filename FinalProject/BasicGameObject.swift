@@ -7,6 +7,12 @@
 //
 import SpriteKit
 
+//Assigns bitmasks for physics objects
+//The bitmasks allow for special interactions to take place
+//Player collides with enemy = lose screen
+//Player collides with dot = collect and score point
+//Player collides with powerUp = gains power to shoot
+//bullets at enemy if enemy's sprite is tapped by player
 enum CollisionTypes: UInt32 {
     case player = 1
     case enemy = 2
