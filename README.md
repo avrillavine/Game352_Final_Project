@@ -20,31 +20,16 @@ Final Project for Mobile Class
 -inheritance
 -ploymorphism
 -1 protocol
--matchmaking ->50% done
-
+-matchmaking 
 
 # Ibalet
 
 
-Game Overview:
-
-Give a quick summery of what the game is about. Name, genre and what it takes inspiration from.
-
-
-
 The Objective of the Game:
 
-Collect randomly placed dots to increase your score, avoid enemies! Getting touched by an enemy will kill the player and end the game. 
+Collect randomly placed dots to increase your score! ~~avoid enemies! Getting touched by an enemy will kill the player and end the game.~~ could not add enemies in due to time as being unable to alter the score
 
-Mechanics:
+Players interact with the game by tapping and dragging their finger against the screen to direct a triangle towards the target
+The target is the circular dot on the screen which disappears upon contact
 
-Explain the core mechanics of the game and features.
-
-Gameplay:
-
-The game plays out as a basic game of grow and collect while avoiding enemies.
-
-Style:
-
-Describe the art style of the game as well as audio and how it will be used. Attach reference images from similar games when applicable.
 
